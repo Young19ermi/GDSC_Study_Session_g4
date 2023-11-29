@@ -1,0 +1,29 @@
+/* Solution For GDSC :- Task 2 : Number Analysis App  */
+ void main() {
+  List<int> numbers = [1, 8, 3, 3, 4, 45, 5, 69, 10, 39, 91, 10];
+  numbers.sort();
+  int findMaximum(List<int> numbers) {
+    return numbers[numbers.length -1];
+  }
+
+  int findMinimum(List<int> numbers) {
+    return numbers[0];
+  }
+
+  int calculateSum(List<int> numbers) {
+    int sum = 0;
+    for (int i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    return sum;
+  }
+
+  double calculateAverage(List<int> numbers) {
+    return calculateSum(numbers) / numbers.length;
+  }
+  print(findMaximum(numbers));
+  print(findMinimum(numbers));
+  print(calculateSum(numbers));
+  print(calculateAverage(numbers));
+  
+}
